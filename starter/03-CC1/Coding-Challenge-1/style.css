@@ -1,0 +1,80 @@
+/*
+    Jonas Schmedtmann's Unit 3: Coding Challenge 1.
+    Completed by Aaron Torres. 
+
+    Styling ideas for the Chuck Taylors coding challenge.
+
+    0. Add a border around the whole page. 
+    1. h2 headline is centered and uppercase.
+    2. Price is bold, use <strong> element.
+    3. Use a class to adjust the 'free shipping' text.
+        - Grey color. 
+        - Uppercase.
+    4. Change the dots on <li> elements to squares. 
+    5. Style the 'Add to Cart' button. 
+    6. Set a hover state for the hyperlink. 
+*/
+
+.product {
+    border: 5px solid #000;
+    font-family: sans-serif;
+    /* text-align: center; */
+}
+ 
+/* 1. h2 headline is centered and uppercase. I decided to use a class. */
+
+.headline {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+/* Bonus: Style the image a bit. */
+.img-chuck-taylors {
+    border-radius: 50%;
+}
+
+/* 2. Price is bold, use <strong> element. */
+.price {
+    /* You can change the p element with the "price" class here. 
+    However, the change needed can be done in HTML with the <strong> element. 
+    */
+    text-transform: strong;
+    font-size: 20px;
+}
+
+/* 3. Use a class to adjust the 'free shipping' and 'product details' text. */
+.free-shipping {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgb(148, 148, 148);
+}
+
+.product-details {
+        text-transform: uppercase;
+}
+
+/* 4. Change the dots on <li> elements to squares.  
+    /* Reference: https://documentation.unbounce.com/hc/en-us/articles/360001354046-How-Do-I-Change-the-Color-or-Shape-of-Bullet-Points- */
+.product-details {
+    list-style-type: square;
+}
+
+/*     5. Style the 'Add to Cart' button.  */
+.add-to-cart {
+    background-color: #000;
+    color: #F7F7F7;
+    font-size: 20px
+}
+
+/*     6. Set a hover state for the hyperlink and cart button.  */
+.add-to-cart:hover {
+    background-color: #F7F7F7;
+    color: #000;
+    cursor: pointer;
+}
+
+.link-more-information:hover,
+.link-more-information:active {
+    text-decoration: none;
+    color: rgb(134, 0, 0);

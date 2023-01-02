@@ -1,0 +1,191 @@
+/*
+    Jonas Schmedtmann's Unit 4: Coding Challenge 1.
+    Completed by Aaron Torres. 
+    Monday, April 11 2022
+
+    0. Use 'box-sizing' in the universal selector. 
+    1. Create a float layout that has the 3 parts side by side.
+    2. Use floats to align the 'free shipping' element.
+    3. Use a width of 240 px of space for each 3 main elements. 
+
+    Why does the last container not line up with the other ones? :)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product {
+    border: 5px solid #000;
+    font-family: sans-serif;
+    line-height: 30px;
+    width: 825px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+
+}
+.container {
+    background-color: #EC2F2F;
+}
+.product-img {
+    /* border-radius: 50%; */
+    float: left;
+    margin-right: 40px;
+}
+
+body {
+    font-family: sans-serif;
+    font: 1.4;
+}
+
+.headline {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #F7F7F7;
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.sale {
+    background-color: #ec2f2f;
+    color: rgb(219, 219, 219);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: -35px;
+}
+
+/* PRODUCT INFO */
+
+.product-info {
+    /* (825 - 8 - 250 - 80) / 2 
+    max width of each 2 columns (not counting the image) is 243 px */
+    width: 243px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.product-info-description {
+    /* clear some floats. */
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.price {
+    text-transform: strong;
+    font-size: 20px;
+    float: left;
+}
+
+.free-shipping {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(148, 148, 148);
+    margin-bottom: 20px;
+    float: right;
+    margin-top: 8px;
+}
+
+.colors {
+    margin-left: 10px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0);
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.color-blue {
+    background-color: #2F6EE2;
+}
+
+.color-red {
+    background-color: #EC2F2F;
+}
+
+.color-yellow {
+    background-color: #F0BF1E;
+}
+
+.color-green {
+    background-color: #90CC20;
+}
+
+.color-brown {
+    background-color: #885214;
+}
+
+/* PRODUCT DETAILS */
+
+.product-details {
+    width: 243px;
+    float: left;
+    margin-top: 20px;
+}
+.product-details-headline {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.product-list-details {
+    list-style-type: square;
+    margin: 20px 20px;
+}
+
+.product-details-description {
+    clear: both;
+    width: 243px;
+    float: left;
+}
+
+/* BUTTON */
+.add-to-cart {
+    background-color: #000;
+    border: none;
+    color: #F7F7F7;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border-top: 5px solid #000;
+}
+
+.add-to-cart:hover {
+    background-color: #F7F7F7;
+    color: #000;
+    cursor: pointer;
+}
+
+.link-more-information:hover,
+.link-more-information:active {
+    color: #000;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.link-more-information:hover,
+.link-more-information:active {
+    text-decoration: none;
+    color: rgb(134, 0, 0);
+}
+

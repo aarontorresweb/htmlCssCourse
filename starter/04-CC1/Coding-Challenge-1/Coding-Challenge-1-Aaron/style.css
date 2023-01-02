@@ -1,0 +1,186 @@
+/*
+    Jonas Schmedtmann's Unit 4: Coding Challenge 1.
+    Completed by Aaron Torres. 
+    Monday, April 11 2022
+
+    0. Use 'box-sizing' in the universal selector. 
+    1. Create a float layout that has the 3 parts side by side.
+    2. Use floats to align the 'free shipping' element.
+    3. Use a width of 240 px of space for each 3 main elements. 
+*/
+
+/* 2. Global reset of margin/padding. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product {
+    border: 5px solid #000;
+    font-family: sans-serif;
+    line-height: 30px;
+    /* 0 / 1. Center the article element. */
+    width: 825px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.headline {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #F7F7F7;
+    /* 3. Adding add'l margins and paddings. */
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+/* 0 and 1: The 'sale' element in the upper left corner. */
+.sale {
+    background-color: #ec2f2f;
+    color: rgb(219, 219, 219);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: -35px;
+}
+
+.img-chuck-taylors {
+    border-radius: 50%;
+}
+
+/* .headline-img-container {
+    // Center the image within a div. This is an extra touch for the coding challenge.
+    // I took this out for the new layout 11 April 2022
+    display: flex;
+    justify-content: center;
+} */
+
+.price {
+    /* You can change the p element with the "price" class here. 
+    However, the change needed can be done in HTML with the <strong> element. 
+    */
+    text-transform: strong;
+    font-size: 20px;
+}
+
+.free-shipping {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(148, 148, 148);
+    /* 3. Adding add'l margins and paddings. */
+    margin-bottom: 20px;
+}
+
+.colors {
+    margin-left: 10px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0);
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.color-blue {
+    background-color: #2F6EE2;
+}
+
+.color-red {
+    background-color: #EC2F2F;
+}
+
+.color-yellow {
+    background-color: #F0BF1E;
+}
+
+.color-green {
+    background-color: #90CC20;
+}
+
+.color-brown {
+    background-color: #885214;
+}
+
+.product-details-headline {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.product-details {
+    list-style-type: square;
+    margin: 20px 20px;
+}
+
+/* BUTTON */
+.add-to-cart {
+    background-color: #000;
+    border: none;
+    color: #F7F7F7;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* 4. Add padding and make the width across the whole container. */
+    padding: 15px;
+    width: 100%;
+    /* 4. continued, need to add a border. */
+    border-top: 5px solid #000;
+}
+
+.add-to-cart:hover {
+    background-color: #F7F7F7;
+    color: #000;
+    cursor: pointer;
+}
+
+.link-more-information:hover,
+.link-more-information:active {
+    color: #000;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.link-more-information:hover,
+.link-more-information:active {
+    text-decoration: none;
+    color: rgb(134, 0, 0);
+}
+
+/* .container added for section 4 CC1 */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.headline-img-container {
+    float: left;
+    width: 240px;
+}
+
+.price-main {
+    float: left;
+    width: 240px;
+}
+
+.product-details-main {
+    float: right;
+    width: 240px;
+}
+

@@ -1,0 +1,102 @@
+/*
+    Jonas Schmedtmann's Unit 3: Coding Challenge 2.
+    Completed by Aaron Torres. 
+
+    Styling ideas for the Chuck Taylors coding challenge #2.
+
+    1. Center the article element (whole page) using the box model.
+    Width of article element is 825 pixels. 
+    2. Global reset - remove default margins/paddings. 
+    3. Add back margins/paddings as needed. 
+    4. Make the button wide across the whole container and add a border.
+
+*/
+
+/* 2. Global reset of margin/padding. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.product {
+    border: 5px solid #000;
+    font-family: sans-serif;
+    line-height: 30px;
+    /* 0 / 1. Center the article element. */
+    width: 825px;
+    margin: 50px auto;
+}
+
+.headline {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #F7F7F7;
+    /* 3. Adding add'l margins and paddings. */
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.img-chuck-taylors {
+    border-radius: 50%;
+}
+
+.headline-img-container {
+    /* Center the image within a div. 
+    This is an extra touch for the coding challenge. */
+    display: flex;
+    justify-content: center;
+}
+
+.price {
+    /* You can change the p element with the "price" class here. 
+    However, the change needed can be done in HTML with the <strong> element. 
+    */
+    text-transform: strong;
+    font-size: 20px;
+}
+
+.free-shipping {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(148, 148, 148);
+    /* 3. Adding add'l margins and paddings. */
+    margin-bottom: 20px;
+}
+
+.product-details-headline {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.product-details {
+    list-style-type: square;
+    margin: 20px 20px;
+}
+
+/* BUTTON */
+.add-to-cart {
+    background-color: #000;
+    border: none;
+    color: #F7F7F7;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* 4. Add padding and make the width across the whole container. */
+    padding: 15px;
+    width: 100%;
+    /* 4. continued, need to add a border. */
+    border-top: 5px solid #000;
+}
+
+.add-to-cart:hover {
+    background-color: #F7F7F7;
+    color: #000;
+    cursor: pointer;
+}
+
+.link-more-information:hover,
+.link-more-information:active {
+    text-decoration: none;
+    color: rgb(134, 0, 0);
